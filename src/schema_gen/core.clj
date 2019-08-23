@@ -16,21 +16,27 @@
 
 (defn populate
   [group]
-  {:group (read-group (:group group))
-   :children (map populate (:children group))})
+  (assoc (read-group (:group group))
+         :childrenGroupsSchemas
+         (map populate (:children group))))
 
 (defn generate
   [flowName]
   (let [flow (read-flow flowName)
         footer (read-group (-> flow :footer :group))
         header (read-group (-> flow :header :group))
-        groups (-> flow :hierarchy)]
-    (clojure.pprint/pprint (assoc) (map populate groups))
-    (println footer)
-    (println header)
-    (println groups)))
+        groups (map populate (-> flow :hierarchy))]
+    (clojure.pprint/pprint
+     {:flowName flowName
+      :headerSchema header
+      :footerSchema footer
+      :rootGroupSchemas groups})))
 
 (defn -main
   "I don't do a whole lot ... yet."
   [& args]
   (println (read-flow "ASP")))
+
+(comment
+  {:group (read-group (:group group))
+   :childrenGroupsSchemas (map populate (:children group))})
