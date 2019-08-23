@@ -24,7 +24,7 @@
     "billingYear"
     "invoiceAmount"],
    :childrenGroupsSchemas
-   ({:groupCode "K42",
+   [{:groupCode "K42",
      :groupName "standardCoreInvoiceItemSummary",
      :itemsSchemas
      ["invoiceNumber"
@@ -34,7 +34,7 @@
       "chargeTypeCode"
       "chargeAmount"],
      :childrenGroupsSchemas
-     ({:groupCode "K88",
+     [{:groupCode "K88",
        :groupName "reconciliationInvoiceChargeClass4Lsp",
        :itemsSchemas
        ["supplierShortCode"
@@ -97,7 +97,7 @@
         "reconciliationVarianceQuantity"
         "prevailingReconciliationChargeComponent"
         "newReconciliationChargeComponent"],
-       :childrenGroupsSchemas ()}
+       :childrenGroupsSchemas []}
       {:groupCode "K89",
        :groupName "reconciliationInvoiceChargeClass123Lsp",
        :itemsSchemas
@@ -127,7 +127,7 @@
         "subEnergy"
         "currentChargeIndicator"],
        :childrenGroupsSchemas
-       ({:groupCode "J42",
+       [{:groupCode "J42",
          :groupName "dailySummaryNtsOptionalTariff",
          :itemsSchemas
          ["supplierShortCode"
@@ -159,7 +159,7 @@
           "totalChargeAmount"
           "ldzIdentifier"
           "invoiceNumber"],
-         :childrenGroupsSchemas ()})}
+         :childrenGroupsSchemas []}]}
       {:groupCode "K90",
        :groupName "reconciliationInvAggregateDetailClass34Ssp",
        :itemsSchemas
@@ -174,7 +174,7 @@
         "chargeRate"
         "chargeTypeCode"
         "reconciliationChargeAmount"],
-       :childrenGroupsSchemas ()}
+       :childrenGroupsSchemas []}
       {:groupCode "J13",
        :groupName "recInvRbdCharge",
        :itemsSchemas
@@ -192,7 +192,7 @@
         "rbdAmount"
         "invoiceNumber"],
        :childrenGroupsSchemas
-       ({:groupCode "J14",
+       [{:groupCode "J14",
          :groupName "recInvRbdLdzAggregate",
          :itemsSchemas
          ["ldzIdentifier"
@@ -200,7 +200,7 @@
           "chargeTypeCode"
           "reconciliationQuantity"
           "reconciliationValue"],
-         :childrenGroupsSchemas ()}
+         :childrenGroupsSchemas []}
         {:groupCode "J15",
          :groupName "recInvRbdSpgDetail",
          :itemsSchemas
@@ -209,7 +209,7 @@
           "dailyAq"
           "dailyIsolatedMeterPointsAq"
           "csepShipperSspAqTotal"],
-         :childrenGroupsSchemas ()})}
+         :childrenGroupsSchemas []}]}
       {:groupCode "K91",
        :groupName "reconciliationInvoiceUgSmear",
        :itemsSchemas
@@ -228,7 +228,7 @@
         "shipperThroughputShare"
         "uigChargeAmount"
         "uigReconciliationQuantity"],
-       :childrenGroupsSchemas ()}
+       :childrenGroupsSchemas []}
       {:groupCode "K84",
        :groupName "capacityReconciliationCharge",
        :itemsSchemas
@@ -252,7 +252,7 @@
         "incentiveFactor"
         "chargeAmount"
         "totalChargeAmount"],
-       :childrenGroupsSchemas ()}
+       :childrenGroupsSchemas []}
       {:groupCode "K93",
        :groupName "amendmentSmpDetail",
        :itemsSchemas
@@ -297,4 +297,4 @@
         "newChargeComponent"
         "adjustedChargeComponent"
         "currentChargeIndicator"],
-       :childrenGroupsSchemas ()})})})}
+       :childrenGroupsSchemas []}]}]})}

@@ -13,15 +13,14 @@
   (read-file (str "resources/flows/" flow ".json")))
 
 (defn read-group
-  [group]
-  (read-file  (str "resources/groups/" group ".json")))
+  [code]
+  (read-file  (str "resources/groups/" code ".json")))
 
 (defn populate
   [group]
-  (let [children (:children group)]
-    (assoc (read-group (:group group))
-           :childrenGroupsSchemas
-           (map populate children))))
+  (assoc (read-group (:code group))
+         :childrenGroupsSchemas
+         (mapv populate (:children group))))
 
 (defn generate
   [flowName]
@@ -30,7 +29,7 @@
      {:flowName flowName
       :headerSchema (populate (-> flow :header))
       :footerSchema (populate (-> flow :footer))
-      :rootGroupSchemas (map populate (-> flow :hierarchy))}
+      :rootGroupSchemas (mapv populate (-> flow :root))}
      (io/writer (str "resources/generated/" flowName ".edn")))))
 
 (defn -main

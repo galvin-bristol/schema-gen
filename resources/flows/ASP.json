@@ -2,58 +2,58 @@
     "provider" : "SPAA",
     "flowName" : "ASP",
     "header": {
-        "group" : "A00"
+        "code" : "A00"
     },
     "footer": {
-        "group" : "Z99"
+        "code" : "Z99"
     },
-    "hierarchy" : [
+    "root" : [
         {
-            "group" : "Q28",
+            "code" : "Q28",
             "children" : [
                 {
-                    "group" : "K42",
+                    "code" : "K42",
                     "children" : [
                         {
-                            "group" : "K88",
+                            "code" : "K88",
                             "children" : []
                         },
                         {
-                            "group" : "K89",
+                            "code" : "K89",
                             "children" : [
                                 {
-                                    "group" : "J42",
+                                    "code" : "J42",
                                     "children" : []
                                 }
                             ]
                         },
                         {
-                            "group" : "K90",
+                            "code" : "K90",
                             "children" : []
                         },
                         {
-                            "group" : "J13",
+                            "code" : "J13",
                             "children" : [
                                 {
-                                    "group" : "J14",
+                                    "code" : "J14",
                                     "children" : []
                                 },
                                 {
-                                    "group" : "J15",
+                                    "code" : "J15",
                                     "children" : []
                                 }
                             ]
                         },
                         {
-                            "group" : "K91",
+                            "code" : "K91",
                             "children" : []
                         },
                         {
-                            "group" : "K84",
+                            "code" : "K84",
                             "children" : []
                         },
                         {
-                            "group" : "K93",
+                            "code" : "K93",
                             "children" : []
                         }
                     ]
