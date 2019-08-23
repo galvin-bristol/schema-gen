@@ -26,17 +26,23 @@
         footer (read-group (-> flow :footer :group))
         header (read-group (-> flow :header :group))
         groups (map populate (-> flow :hierarchy))]
-    (clojure.pprint/pprint
-     {:flowName flowName
-      :headerSchema header
-      :footerSchema footer
-      :rootGroupSchemas groups})))
+    (clojure.pprint/pprint {:flowName flowName
+                            :headerSchema header
+                            :footerSchema footer
+                            :rootGroupSchemas groups}
+                           (clojure.java.io/writer (str "resources/generated/" flowName ".edn")))))
 
 (defn -main
-  "I don't do a whole lot ... yet."
   [& args]
-  (println (read-flow "ASP")))
+  (generate "ASP"))
 
 (comment
   {:group (read-group (:group group))
-   :childrenGroupsSchemas (map populate (:children group))})
+   :childrenGroupsSchemas (map populate (:children group))}
+
+  (clojure.pprint/pprint
+   (spit (str "resources/generated/" flowName ".edn")
+         {:flowName flowName
+          :headerSchema header
+          :footerSchema footer
+          :rootGroupSchemas groups})))
