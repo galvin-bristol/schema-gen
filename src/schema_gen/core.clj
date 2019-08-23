@@ -19,11 +19,9 @@
 (defn populate
   [group]
   (let [children (:children group)]
-    (if (empty children)
-      (read-group (:group group))
-      (assoc (read-group (:group group))
-             :childrenGroupsSchemas
-             (map populate children)))))
+    (assoc (read-group (:group group))
+           :childrenGroupsSchemas
+           (map populate children))))
 
 (defn generate
   [flowName]
