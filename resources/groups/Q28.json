@@ -1,0 +1,13 @@
+{    
+    "groupCode": "Q28",
+    "groupName": "standardInvoiceSummary",
+    "itemsSchemas": [
+        "organisationShortCode",
+        "invoiceTypeCode",
+        "invoiceNumber",
+        "nwoShortCode",
+        "billingMonth",
+        "billingYear",
+        "invoiceAmount"
+    ]
+}

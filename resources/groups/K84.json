@@ -1,0 +1,26 @@
+{
+    "groupCode": "K84",
+    "groupName": "capacityReconciliationCharge",
+    "itemsSchemas": [
+      "supplierShortCode",
+      "nwoShortCode",
+      "invoiceNumber",
+      "ldzIdentifier",
+      "chargeItemReferenceNumber",
+      "chargeTypeCode",
+      "meterPointReference",
+      "billableStartDate",
+      "billableEndDate",
+      "varianceStartDate",
+      "varianceEndDate",
+      "billablePeriodNumberOfDays",
+      "supplyPointConfirmationReference",
+      "currentSmpSoq",
+      "previousSmpSoq",
+      "combinedNewCapacityRate",
+      "combinedPrevCapacityRate",
+      "incentiveFactor",
+      "chargeAmount",
+      "totalChargeAmount"
+    ]
+ }

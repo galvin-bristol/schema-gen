@@ -1,0 +1,31 @@
+{
+    "groupCode": "K89",
+    "groupName": "reconciliationInvoiceChargeClass123Lsp",
+    "itemsSchemas": [
+      "chargeItemReferenceNumber",
+      "supplierShortCode",
+      "nwoShortCode",
+      "invoiceNumber",
+      "cmsReferenceNumber",
+      "supplyPointConfirmationReference",
+      "ldzIdentifier",
+      "csepId",
+      "meterPointReference",
+      "meterLinkCode",
+      "reconciliationStartDate",
+      "reconciliationEndDate",
+      "reconciliationVarianceStartDate",
+      "reconciliationVarianceEndDate",
+      "gasFlowDay",
+      "cv",
+      "originalInvoiceNumber",
+      "chargeTypeCode",
+      "chargeRate",
+      "reconciliationChargeComponent",
+      "prevailingEnergy",
+      "revisedEnergy",
+      "energyVariance",
+      "subEnergy",
+      "currentChargeIndicator"
+    ]
+}

@@ -1,0 +1,11 @@
+{
+    "groupCode": "J14",
+    "groupName": "recInvRbdLdzAggregate",
+    "itemsSchemas": [
+      "ldzIdentifier",
+      "sctCode",
+      "chargeTypeCode",
+      "reconciliationQuantity",
+      "reconciliationValue"
+    ]
+}

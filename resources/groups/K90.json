@@ -1,0 +1,17 @@
+{
+    "groupCode": "K90",
+    "groupName": "reconciliationInvAggregateDetailClass34Ssp",
+    "itemsSchemas": [
+      "invoiceNumber",
+      "supplierShortCode",
+      "nwoShortCode",
+      "ldzIdentifier",
+      "eucNumber",
+      "classType",
+      "varianceStartDate",
+      "varianceEndDate",
+      "chargeRate",
+      "chargeTypeCode",
+      "reconciliationChargeAmount"
+    ]
+  }

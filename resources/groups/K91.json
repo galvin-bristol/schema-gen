@@ -1,0 +1,21 @@
+{
+    "groupCode": "K91",
+    "groupName": "reconciliationInvoiceUgSmear",
+    "itemsSchemas": [
+      "invoiceNumber",
+      "nwoShortCode",
+      "chargeItemReferenceNumber",
+      "chargeTypeCode",
+      "ldzIdentifier",
+      "eucNumber",
+      "classType",
+      "uigFactor",
+      "uigIncurredMonth",
+      "uigIncurredYear",
+      "ldzTotalThroughput",
+      "shipperThroughput",
+      "shipperThroughputShare",
+      "uigChargeAmount",
+      "uigReconciliationQuantity"
+    ]
+}

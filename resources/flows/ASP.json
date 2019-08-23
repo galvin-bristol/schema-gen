@@ -1,0 +1,64 @@
+{
+    "provider" : "SPAA",
+    "flowName" : "ASP",
+    "header": {
+        "group" : "A00"
+    },
+    "footer": {
+        "group" : "Z99"
+    },
+    "hierarchy" : [
+        {
+            "group" : "Q28",
+            "children" : [
+                {
+                    "group" : "K42",
+                    "children" : [
+                        {
+                            "group" : "K88",
+                            "children" : []
+                        },
+                        {
+                            "group" : "K89",
+                            "children" : [
+                                {
+                                    "group" : "J42",
+                                    "children" : []
+                                }
+                            ]
+                        },
+                        {
+                            "group" : "K90",
+                            "children" : []
+                        },
+                        {
+                            "group" : "J13",
+                            "children" : [
+                                {
+                                    "group" : "J14",
+                                    "children" : []
+                                },
+                                {
+                                    "group" : "J15",
+                                    "children" : []
+                                }
+                            ]
+                        },
+                        {
+                            "group" : "K91",
+                            "children" : []
+                        },
+                        {
+                            "group" : "K84",
+                            "children" : []
+                        },
+                        {
+                            "group" : "K93",
+                            "children" : []
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

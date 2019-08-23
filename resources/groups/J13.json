@@ -1,0 +1,19 @@
+{
+	"groupCode": "J13",
+	"groupName": "recInvRbdCharge",
+	"itemsSchemas": [
+		"nwoShortCode",
+		"chargeItemReferenceNumber",
+		"chargeTypeCode",
+		"rbdLdz",
+		"rbdIncurredMonth",
+		"rbdIncurredYear",
+		"sctCode",
+		"rbdLdzAq",
+		"rbdShipperAq",
+		"smallSpoMarketShare",
+		"rbdReconciliationQuantity",
+		"rbdAmount",
+		"invoiceNumber"
+	]
+}

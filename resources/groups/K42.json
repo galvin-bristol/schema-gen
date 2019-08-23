@@ -1,0 +1,12 @@
+{
+    "groupCode": "K42",
+    "groupName": "standardCoreInvoiceItemSummary",
+    "itemsSchemas": [
+        "invoiceNumber",
+        "invoiceItemReferenceNumber",
+        "nwoShortCode",
+        "invoiceTypeCode",
+        "chargeTypeCode",
+        "chargeAmount"
+    ]
+}

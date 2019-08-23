@@ -1,0 +1,11 @@
+{
+    "groupCode": "J15",
+    "groupName": "recInvRbdSpgDetail",
+    "itemsSchemas": [
+      "ldzIdentifier",
+      "spgEffectiveDate",
+      "dailyAq",
+      "dailyIsolatedMeterPointsAq",
+      "csepShipperSspAqTotal"
+    ]
+}
