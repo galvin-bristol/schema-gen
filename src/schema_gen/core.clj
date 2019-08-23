@@ -17,7 +17,7 @@
 (defn populate
   [group]
   {:group (read-group (:group group))
-   :children (populate (:children group))})
+   :children (map populate (:children group))})
 
 (defn generate
   [flowName]
@@ -25,7 +25,7 @@
         footer (read-group (-> flow :footer :group))
         header (read-group (-> flow :header :group))
         groups (-> flow :hierarchy)]
-    (clojure.pprint/pprint (map populate groups))
+    (clojure.pprint/pprint (assoc) (map populate groups))
     (println footer)
     (println header)
     (println groups)))
