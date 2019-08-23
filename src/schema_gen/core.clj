@@ -1,7 +1,7 @@
 (ns schema-gen.core
-  (:require [clojure.data.json :as json
-             clojure.pprint :as pp
-             clojure.java.io :as io]))
+  (:require [clojure.data.json :as json]
+            [clojure.pprint :as pp]
+            [clojure.java.io :as io]))
 
 (defn read-file
   [path]
