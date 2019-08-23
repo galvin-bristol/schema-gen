@@ -1,5 +1,7 @@
 (ns schema-gen.core
-  (:require [clojure.data.json :as json]))
+  (:require [clojure.data.json :as json
+             clojure.pprint :as pp
+             clojure.java.io :as io]))
 
 (defn read-file
   [path]
@@ -16,21 +18,22 @@
 
 (defn populate
   [group]
-  (assoc (read-group (:group group))
-         :childrenGroupsSchemas
-         (map populate (:children group))))
+  (let [children (:children group)]
+    (if (empty children)
+      (read-group (:group group))
+      (assoc (read-group (:group group))
+             :childrenGroupsSchemas
+             (map populate children)))))
 
 (defn generate
   [flowName]
-  (let [flow (read-flow flowName)
-        footer (read-group (-> flow :footer :group))
-        header (read-group (-> flow :header :group))
-        groups (map populate (-> flow :hierarchy))]
-    (clojure.pprint/pprint {:flowName flowName
-                            :headerSchema header
-                            :footerSchema footer
-                            :rootGroupSchemas groups}
-                           (clojure.java.io/writer (str "resources/generated/" flowName ".edn")))))
+  (let [flow (read-flow flowName)]
+    (pp/pprint
+     {:flowName flowName
+      :headerSchema (populate (-> flow :header))
+      :footerSchema (populate (-> flow :footer))
+      :rootGroupSchemas (map populate (-> flow :hierarchy))}
+     (io/writer (str "resources/generated/" flowName ".edn")))))
 
 (defn -main
   [& args]
