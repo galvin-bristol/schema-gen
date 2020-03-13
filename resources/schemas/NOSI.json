@@ -1,0 +1,253 @@
+[
+  {
+    "flowName" : "NOSI",
+    "flowHumanName" : "NOSI Flow",
+    "trailingCellDelimiter" : false,
+    "rawFormat" : {
+      "fieldDelimiter" : ",",
+      "forceQuote" : "only-logicalType-CHAR"
+    },
+    "schemaOrigin" : "spaa_web",
+    "headerSchema" : {
+      "groupCode" : "HEADR",
+      "groupName" : "header",
+      "itemsSchemas" : [
+        {
+          "itemName" : "flowName",
+          "itemLogicalType" : "CHAR",
+          "itemLogicalLength" : 5
+        },
+        {
+          "itemName" : "originatorId",
+          "itemLogicalType" : "CHAR",
+          "itemLogicalLength" : 12
+        },
+        {
+          "itemName" : "originatorRole",
+          "itemLogicalType" : "CHAR",
+          "itemLogicalLength" : 5
+        },
+        {
+          "itemName" : "recipientId",
+          "itemLogicalType" : "CHAR",
+          "itemLogicalLength" : 12
+        },
+        {
+          "itemName" : "recipientRole",
+          "itemLogicalType" : "CHAR",
+          "itemLogicalLength" : 5
+        },
+        {
+          "itemName" : "createdDate",
+          "itemLogicalType" : "DATE"
+        },
+        {
+          "itemName" : "createdTime",
+          "itemLogicalType" : "CHAR",
+          "itemLogicalLength" : 6
+        },
+        {
+          "itemName" : "fileIdentifier",
+          "itemLogicalType" : "CHAR",
+          "itemLogicalLength" : 8
+        },
+        {
+          "itemName" : "fileUsageCode",
+          "itemLogicalType" : "CHAR",
+          "itemLogicalLength" : 5
+        },
+        {
+          "itemName" : "recordCount",
+          "itemLogicalType" : "INT",
+          "itemLogicalLength" : 10
+        },
+        {
+          "itemName" : "transactionCount",
+          "itemLogicalType" : "INT",
+          "itemLogicalLength" : 10
+        }
+      ]
+    },
+    "footerSchema" : {
+      "groupCode" : "TRAIL",
+      "groupName" : "footer"
+    },
+    "rootGroupsSchemas" : [
+      {
+        "groupName" : "nosiGroup",
+        "groupHumanName" : "NOSI Group",
+        "groupCode" : "NOSI",
+        "groupRange" : "1-*",
+        "itemsSchemas" : [
+          {
+            "itemName" : "buildingNumber",
+            "itemOptionality" : "O",
+            "itemDescription" : "Building Number as defined in PAF.",
+            "itemLogicalType" : "INT",
+            "itemValidSetDescription" : "Any within the constraints of the format",
+            "itemLogicalLength" : 4,
+            "itemHumanName" : "Building Number"
+          },
+          {
+            "itemName" : "subBuildingName",
+            "itemOptionality" : "O",
+            "itemDescription" : "Sub Building Names as defined in PAF.",
+            "itemLogicalType" : "CHAR",
+            "itemValidSetDescription" : "Any within the constraints of the format",
+            "itemLogicalLength" : 30,
+            "itemHumanName" : "Sub Building Name"
+          },
+          {
+            "itemName" : "buildingName",
+            "itemOptionality" : "O",
+            "itemDescription" : "Building Name as defined in PAF.",
+            "itemLogicalType" : "CHAR",
+            "itemValidSetDescription" : "Any within the constraints of the format",
+            "itemLogicalLength" : 50,
+            "itemHumanName" : "Building Name"
+          },
+          {
+            "itemName" : "principalStreet",
+            "itemOptionality" : "O",
+            "itemDescription" : "A combination of 'Thoroughfare Name' and 'Thoroughfare Descriptor' as defined in PAF.",
+            "itemLogicalType" : "CHAR",
+            "itemValidSetDescription" : "Any within the constraints of the format",
+            "itemLogicalLength" : 35,
+            "itemHumanName" : "Principal Street"
+          },
+          {
+            "itemName" : "dependentLocality",
+            "itemOptionality" : "O",
+            "itemDescription" : "A named geographically defined area within a Post Town area (a Postal District).",
+            "itemLogicalType" : "CHAR",
+            "itemValidSetDescription" : "Any within the constraints of the format",
+            "itemLogicalLength" : 35,
+            "itemHumanName" : "Dependent Locality"
+          },
+          {
+            "itemName" : "postTown",
+            "itemOptionality" : "O",
+            "itemDescription" : "The post town in which the street lies.",
+            "itemLogicalType" : "CHAR",
+            "itemValidSetDescription" : "Any within the constraints of the format",
+            "itemLogicalLength" : 35,
+            "itemHumanName" : "Post Town"
+          },
+          {
+            "itemName" : "postcodeOutcode",
+            "itemOptionality" : "O",
+            "itemLogicalType" : "CHAR",
+            "itemValidSetDescription" : "Any within the constraints of the format",
+            "itemLogicalLength" : 4,
+            "itemHumanName" : "Postcode Outcode"
+          },
+          {
+            "itemName" : "postcodeIncode",
+            "itemOptionality" : "O",
+            "itemLogicalType" : "CHAR",
+            "itemValidSetDescription" : "Any within the constraints of the format",
+            "itemLogicalLength" : 4,
+            "itemHumanName" : "Postcode Incode"
+          },
+          {
+            "itemName" : "meterPointReference",
+            "itemOptionality" : "1",
+            "itemDescription" : "A unique identifier for the point at which a meter is, has been or will be connected to the gas network. These references are less volatile than meter or service identifiers and do not change if the meter is replaced or the service is relayed to the same position. New 'Meter Point References' will only be created for new services or when a service is relayed to a different position.",
+            "itemLogicalType" : "INT",
+            "itemValidSetDescription" : "Any within the constraints of the format",
+            "itemLogicalLength" : 10,
+            "itemHumanName" : "Meter Point Reference"
+          },
+          {
+            "itemName" : "meterSerialNumber",
+            "itemOptionality" : "O",
+            "itemDescription" : "Valid Meter Serial Number.",
+            "itemLogicalType" : "CHAR",
+            "itemValidSetDescription" : "Any within the constraints of the format",
+            "itemLogicalLength" : 14,
+            "itemHumanName" : "Meter Serial Number"
+          },
+          {
+            "itemName" : "meterNoOfDialsOrDigits",
+            "itemOptionality" : "O",
+            "itemDescription" : "Number of dials or digits on the meter which are considered during meter reading. Used to validate meter readings and to determine the number of complete units consumed.",
+            "itemLogicalType" : "INT",
+            "itemValidSetDescription" : "As defined within Market Domain Data Meter Product Table",
+            "itemLogicalLength" : 2,
+            "itemHumanName" : "Meter No of Dials or Digits"
+          },
+          {
+            "itemName" : "meterMechanismCode",
+            "itemOptionality" : "O",
+            "itemDescription" : "The coded value describing the payment mechanism of the meter or module. This value should be used for Advanced Domestic or Smart Meters to denote compliance with the Smart Metering Equipment Technical Specification (SMETS).",
+            "itemLogicalType" : "CHAR",
+            "itemValidSetDescription" : "As defined within Market Domain Data Meter Product Table",
+            "itemLogicalLength" : 3,
+            "itemHumanName" : "Meter Mechanism Code"
+          },
+          {
+            "itemName" : "meterImperialMetricIndicator",
+            "itemOptionality" : "O",
+            "itemDescription" : "Indicates whether the meter measures the volume of gas in imperial or metric units.",
+            "itemLogicalType" : "CHAR",
+            "itemValidSetDescription" : "Values are:-",
+            "itemValidSetValues" : {
+              "I" : "Imperial",
+              "M" : "Metric",
+              "N" : "No Meter Present",
+              "U" : "Unknown"
+            },
+            "itemLogicalLength" : 1,
+            "itemHumanName" : "Meter Imperial Metric Indicator"
+          },
+          {
+            "itemName" : "meterReadingFactor",
+            "itemDecimalLength" : 3,
+            "itemOptionality" : "O",
+            "itemDescription" : "The factor which converts the metered volume into units of hundreds of cubic feet or meters, e.g., 1, 10, 0.1.",
+            "itemLogicalType" : "NUM",
+            "itemValidSetDescription" : "Any within the constraints of the format",
+            "itemLogicalLength" : 6,
+            "itemHumanName" : "Meter Reading Factor"
+          },
+          {
+            "itemName" : "lastActualMeterReading",
+            "itemOptionality" : "O",
+            "itemDescription" : "The most recent actual index read from the meter, including those provided by a Customer.",
+            "itemLogicalType" : "CHAR",
+            "itemValidSetDescription" : "Any within the constraints of the format",
+            "itemLogicalLength" : 12,
+            "itemHumanName" : "Last Actual Meter Reading"
+          },
+          {
+            "itemName" : "lastActualMeterReadingDate",
+            "itemOptionality" : "O",
+            "itemDescription" : "The date on which the 'Last Actual Meter Reading' was taken.\r\n\r\nWhere no last actual reading could be populated, this field should be left null. Date to take the format yyyymmdd.",
+            "itemLogicalType" : "DATE",
+            "itemValidSetDescription" : "Any within the constraints of the format",
+            "itemLogicalLength" : 8,
+            "itemHumanName" : "Last Actual Meter Reading Date"
+          },
+          {
+            "itemName" : "confirmationEndDate",
+            "itemOptionality" : "1",
+            "itemDescription" : "The date on which the ownership of the Supply Point is due to cease. Date to take the format yyyymmdd",
+            "itemLogicalType" : "DATE",
+            "itemValidSetDescription" : "Any within the constraints of the format",
+            "itemLogicalLength" : 8,
+            "itemHumanName" : "Confirmation End Date"
+          },
+          {
+            "itemName" : "oldSupplierEstimatedCoSReading",
+            "itemOptionality" : "O",
+            "itemDescription" : "An estimated reading generated by the Old Supplier, that it would find acceptable if submitted as the closing read for the 'Confirmation End Date'.",
+            "itemLogicalType" : "CHAR",
+            "itemValidSetDescription" : "Any within the constraints of the format",
+            "itemLogicalLength" : 12,
+            "itemHumanName" : "Old Supplier Estimated CoS Reading"
+          }
+        ]
+      }
+    ]
+  }
+]

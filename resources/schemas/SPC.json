@@ -1,0 +1,135 @@
+[{
+  "flowName": "SPC",
+  "rootGroupsSchemas": [
+    {
+      "groupCode": "S34",
+      "groupName": "mrfAndBatchFreqChangeRequest",
+      "itemsSchemas": [
+        "supplyPointConfirmationReference",
+        "nominationShipperRef",
+        "meterPointReference",
+        "mrfTypeCode",
+        "requestedEffectiveDate",
+        "meterReadBatchFrequency"
+      ],
+      "childrenGroupsSchemas": []
+    },
+    {
+      "groupCode": "S35",
+      "groupName": "cancelMrfAndBatchFreqChangeRequest",
+      "itemsSchemas": [
+        "supplyPointConfirmationReference",
+        "nominationShipperRef",
+        "meterPointReference",
+        "mrfTypeCode",
+        "requestedEffectiveDate"
+      ],
+      "childrenGroupsSchemas": []
+    },
+    {
+      "groupCode": "S36",
+      "groupName": "smpCapacityChangeRequest",
+      "itemsSchemas": [
+        "supplyPointConfirmationReference",
+        "nominationShipperRef",
+        "meterPointReference",
+        "requestedDmSoq",
+        "requestedDmShq",
+        "requestedEffectiveDate"
+      ],
+      "childrenGroupsSchemas": []
+    },
+    {
+      "groupCode": "S37",
+      "groupName": "cancelSmpCapacityChange",
+      "itemsSchemas": [
+        "supplyPointConfirmationReference",
+        "nominationShipperRef",
+        "meterPointReference",
+        "requestedDmSoq",
+        "requestedDmShq"
+      ],
+      "childrenGroupsSchemas": []
+    },
+    {
+      "groupCode": "C38",
+      "groupName": "classChange",
+      "itemsSchemas": [
+        "supplyPointConfirmationReference",
+        "nominationShipperRef",
+        "meterPointReference",
+        "requestedSupplyMeterPointClass",
+        "mrfTypeCode",
+        "meterReadBatchFrequency",
+        "requestedDmSoq",
+        "requestedDmShq",
+        "requestedEffectiveDate"
+      ],
+      "childrenGroupsSchemas": []
+    },
+    {
+      "groupCode": "C39",
+      "groupName": "classChangeCancellation",
+      "itemsSchemas": [
+        "supplyPointConfirmationReference",
+        "nominationShipperRef",
+        "meterPointReference",
+        "requestedEffectiveDate"
+      ],
+      "childrenGroupsSchemas": []
+    },
+    {
+      "groupCode": "U80",
+      "groupName": "ntsOptRateChange",
+      "itemsSchemas": [
+        "supplyPointConfirmationReference",
+        "ntsOptionalRateApplicable",
+        "postcodeOutcode",
+        "postcodeIncode",
+        "specifiedExitPoint",
+        "specifiedEntryPoint",
+        "specifiedEntryPointName",
+        "gridReferenceEntryPoint",
+        "gridReferenceExitPoint",
+        "rateEffectiveDate"
+      ],
+      "childrenGroupsSchemas": []
+    },
+    {
+      "groupCode": "U81",
+      "groupName": "ntsOptRateCancel",
+      "itemsSchemas": [
+        "supplyPointConfirmationReference",
+        "ntsOptionalRateApplicable",
+        "postcodeOutcode",
+        "postcodeIncode",
+        "specifiedExitPoint",
+        "specifiedEntryPoint",
+        "specifiedEntryPointName",
+        "gridReferenceEntryPoint",
+        "gridReferenceExitPoint",
+        "requestedRateEffectiveDate"
+      ],
+      "childrenGroupsSchemas": []
+    }
+  ],
+  "headerSchema": {
+    "groupCode": "A00",
+    "groupName": "header",
+    "itemsSchemas": [
+      "organisationId",
+      "flowName",
+      "creationDate",
+      "creationTime",
+      "generationNumber"
+    ]
+  },
+  "footerSchema": {
+    "groupCode": "Z99",
+    "groupName": "footer",
+    "itemsSchemas": [
+      "recordCount"
+    ],
+    "childrenGroupsSchemas": []
+  }
+}]

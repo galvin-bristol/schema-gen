@@ -1,0 +1,8 @@
+{:groupCode "A00",
+ :groupName "header",
+ :itemsSchemas
+ ["organisationId"
+  "flowName"
+  "creationDate"
+  "creationTime"
+  "generationNumber"]}
